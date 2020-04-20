@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iris</title>
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script> 
+    <script src="./iris.js"></script>
+    <script src="./iris-testing.js"></script>
+     <script type="" src="./iris-tensorflow-js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col ">
+                <h3 class="orange-text">This is demo of MultilayerPerceptron to showcase how WEKA works.</h1>
+                <h5>Dataset used for this demo is IRIS flower dataset.</h1>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m6 l6 ">
+                <a class="waves-effect waves-teal btn" onclick="loadDataset()">Load dataset</a>
+                <div class="featureCon">
+                    <p><b>Input List </b> (select features to include while training)</p>
+                    <div class="featureForm"></div>              
+                </div>
+            </div>
+            <div class="col s6 ">
+                <div class="featureinfo"></div>
+                <hr>
+                <div class="config row">
+                    <form action="#" class="form">
+                        <div class="input-field col s6 m6 l6">
+                            <select class="outputselect">
+                              <option value="" disabled selected>Choose your option</option>
+                            </select>
+                            <label>Select Output label</label>
+                        </div>
+                        <p class="range-field col s6 m6 l6">EPOCHS
+                            <input type="range" id="epochs" min="0" max="100" />
+                        </p>
+                    <a class="waves-effect waves-teal btn" type="submmit" onclick="startTraining()">Train</a>
+
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l12 m12">
+                <canvas id="myChart" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+     src="https://code.jquery.com/jquery-3.5.0.slim.js"
+     integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE="
+     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <script>
+
+           $(document).ready(function(){
+                $('select').formSelect();
+            });  
+            
+     
+     </script>
+</body>
+</html>
